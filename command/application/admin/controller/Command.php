@@ -82,7 +82,7 @@ class Command extends Backend
         foreach ($files as $name => $file) {
             if (!$file->isDir()) {
                 $filePath = $file->getRealPath();
-                $name = str_replace($controllerDir, '', $filePath);
+                $name = str_replace("\\","/",str_replace($controllerDir, '', $filePath));
                 $list[] = ['id' => $name, 'name' => $name];
             }
         }
