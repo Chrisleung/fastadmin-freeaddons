@@ -94,7 +94,7 @@ class Menu extends Backend
             }
             else
             {
-                $this->error(__('Invalid parameters'));
+                $this->error(__('Invalid menu key'));
             }
         }
         catch (Exception $e)
